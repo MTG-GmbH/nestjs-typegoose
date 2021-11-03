@@ -39,13 +39,7 @@ describe('createTypegooseProviders', () => {
     jest.setTimeout(120000);
 
     connection = await mongoose.createConnection(
-      await mongod.getConnectionString(),
-      {
-        useCreateIndex: true,
-        useFindAndModify: true,
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-      }
+      await mongod.getUri()
     );
   });
 

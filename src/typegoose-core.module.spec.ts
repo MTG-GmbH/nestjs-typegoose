@@ -43,7 +43,7 @@ describe('TypegooseCoreModule', () => {
 
       (module.exports[0] as FactoryProvider).useFactory();
 
-      expect(mongoose.createConnection).toHaveBeenCalledWith('mongouri', {});
+      expect(mongoose.createConnection).toHaveBeenCalledWith('mongouri');
     });
   });
   describe('forAsyncRoot', () => {

@@ -34,7 +34,7 @@ export class TypegooseCoreModule implements OnApplicationShutdown {
 
     const connectionProvider = {
       provide: connectionName,
-      useFactory: () => mongoose.createConnection(uri, options)
+      useFactory: () => mongoose.createConnection(uri)
     };
 
     return {
