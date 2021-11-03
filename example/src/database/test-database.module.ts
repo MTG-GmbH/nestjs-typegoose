@@ -8,7 +8,7 @@ import { MongoMemoryServer } from 'mongodb-memory-server';
       useFactory: async () => {
         const mongod = new MongoMemoryServer();
         return {
-          uri: await mongod.getConnectionString(),
+          uri: await mongod.getUri(),
           useNewUrlParser: true,
           useUnifiedTopology: true,
           useCreateIndex: true,
